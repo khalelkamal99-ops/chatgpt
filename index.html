@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lazer Yansıma Deneyi</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="panel">
+        <header>
+          <p class="eyebrow">Fizik Laboratuvarı</p>
+          <h1>Lazer Yansıma Deneyleri</h1>
+          <p class="lede">
+            Aynanın açısını ve lazer ışınının giriş açısını değiştirerek yansıma açısını gözlemleyin.
+            Şekil üzerinde gelen ve yansıyan ışınları aynı anda görün.
+          </p>
+        </header>
+
+        <div class="controls">
+          <label class="control">
+            Lazer giriş açısı (°)
+            <input id="incidentAngle" type="range" min="5" max="80" value="35" />
+            <span id="incidentValue" class="value">35°</span>
+          </label>
+
+          <label class="control">
+            Ayna açısı (°)
+            <input id="mirrorAngle" type="range" min="-30" max="30" value="0" />
+            <span id="mirrorValue" class="value">0°</span>
+          </label>
+
+          <label class="control">
+            Işın sayısı
+            <input id="rayCount" type="range" min="1" max="5" value="3" />
+            <span id="rayValue" class="value">3</span>
+          </label>
+
+          <div class="toggles">
+            <label>
+              <input id="showNormal" type="checkbox" checked />
+              Normali göster
+            </label>
+            <label>
+              <input id="showGrid" type="checkbox" checked />
+              Izgarayı göster
+            </label>
+          </div>
+        </div>
+
+        <div class="readout">
+          <div>
+            <p class="label">Geliş açısı</p>
+            <p id="incidentReadout" class="number">35°</p>
+          </div>
+          <div>
+            <p class="label">Yansıma açısı</p>
+            <p id="reflectionReadout" class="number">35°</p>
+          </div>
+          <div>
+            <p class="label">Ayna yönü</p>
+            <p id="mirrorReadout" class="number">0°</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="stage">
+        <canvas id="experiment" width="720" height="520"></canvas>
+        <div class="legend">
+          <span class="legend-item incoming">Gelen ışın</span>
+          <span class="legend-item reflected">Yansıyan ışın</span>
+          <span class="legend-item mirror">Ayna</span>
+          <span class="legend-item normal">Normal</span>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
