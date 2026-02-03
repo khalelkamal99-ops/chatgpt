@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arap Çöl Ralli Oyunu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h1>Arap Çöl Ralli Oyunu</h1>
+        <p>Ok tuşları ile aracı hareket ettir. Engel kapma!</p>
+      </header>
+      <section class="hud">
+        <div>Skor: <span id="score">0</span></div>
+        <div>Seviye: <span id="level">1</span></div>
+        <button id="restart">Yeniden Başlat</button>
+      </section>
+      <canvas id="game" width="420" height="640" aria-label="Araba oyunu"></canvas>
+      <footer>
+        <p>En yüksek hız için odaklan!</p>
+      </footer>
+    </div>
+    <script src="game.js"></script>
+  </body>
+</html>
